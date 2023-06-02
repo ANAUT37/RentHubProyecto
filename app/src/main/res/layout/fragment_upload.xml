@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_claro_transparente"
+    tools:context=".view.fragments.UploadFragment">
+
+    <ImageView
+        android:id="@+id/ivFotosAcordeon"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:padding="100dp"
+        android:src="@drawable/app_logo_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_logo_01" />
+
+    <TextView
+        android:id="@+id/tvWhatFragment7"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_title"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:text="@string/publicar_fragment_name"
+        android:textAlignment="center"
+        android:textColor="@color/azulMarino"
+        android:textSize="26sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvErrorMessageUpload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_error_2"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="Ups! Ha ocurrido un error."
+        android:textAlignment="center"
+        android:textColor="@color/blanco"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/ivFotosAcordeon"
+        app:layout_constraintStart_toStartOf="@+id/ivFotosAcordeon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/bg_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatFragment7">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="523dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/bttnRemoveImage"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/bg_input_1"
+                    android:gravity="clip_vertical|center_vertical|fill_vertical"
+                    android:paddingTop="-10dp"
+                    android:scrollbarSize="0dp"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulMarino"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toTopOf="@+id/rvEditAnunImages"
+                    app:layout_constraintEnd_toStartOf="@+id/bttnAddImage"
+                    app:layout_constraintTop_toBottomOf="@+id/regTexto10"
+                    app:layout_constraintVertical_bias="0.25"
+                    tools:ignore="RtlCompat,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/regTexto8"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="38dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:text="Categoría"
+                    android:textColor="@color/azulMarino"
+                    android:textColorHint="#656565"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/azulMedio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etUploadPrecio" />
+
+                <TextView
+                    android:id="@+id/regTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:text="Nuevo Anuncio"
+                    android:textColor="@color/azulMarino"
+                    android:textColorHint="#656565"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/etUploadTitulo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etUploadTitulo"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_input_1"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Titulo del anuncio (50 caracteres max.)"
+                    android:imeOptions="flagNavigateNext"
+                    android:inputType="textPersonName"
+                    android:overScrollMode="always"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:shadowColor="#AEAEAE"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="#656565"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regTexto" />
+
+                <EditText
+                    android:id="@+id/etUploadDescripcion"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_input_1"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="top"
+                    android:hint="Descripción del anuncio\n(Máximo 512 caracteres)"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:paddingEnd="10dp"
+                    android:shadowColor="#AEAEAE"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="#656565"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etUploadTitulo"
+                    tools:ignore="RtlCompat" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/azulMedio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etUploadDescripcion" />
+
+                <TextView
+                    android:id="@+id/regTexto10"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="38dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:text="Seleccionar imágenes"
+                    android:textColor="@color/azulMarino"
+                    android:textColorHint="#656565"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginEnd="22dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Debes seleccionar un mínimo de 1 y un máximo de 10 imágenes"
+                    android:textAlignment="center"
+                    android:textColor="@color/negroMedio"
+                    android:textColorHint="#656565"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@+id/bttnRemoveImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regTexto10" />
+
+                <View
+                    android:id="@+id/view14"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/azulMedio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvEditAnunImages" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEditAnunImages"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="31dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <TextView
+                    android:id="@+id/regTexto3"
+
+                    android:layout_width="342dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="38dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:text="Localización y precio"
+                    android:textColor="@color/azulMarino"
+                    android:textColorHint="#656565"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view14" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/privacidad_ubicacion_upload"
+                    android:textAlignment="center"
+                    android:textColor="@color/negroMedio"
+                    android:textColorHint="#656565"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/etUploadLocalizacion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regTexto3" />
+
+                <EditText
+                    android:id="@+id/etUploadLocalizacion"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_input_1"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Ciudad, barrio, calle..."
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:shadowColor="#AEAEAE"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="#656565"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPredictionUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_input_1"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etUploadLocalizacion" />
+
+                <EditText
+                    android:id="@+id/etUploadPrecio"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_input_1"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Precio €/Mes"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:shadowColor="#AEAEAE"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="#656565"
+                    app:layout_constraintBottom_toTopOf="@+id/view8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvPredictionUpload" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategoría"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="33dp"
+                    android:background="@drawable/bg_input_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regTexto8"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <FrameLayout
+                    android:id="@+id/flEditAnuncioCategoria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/bttnUploadSubmit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerCategoría">
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/bttnUploadSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="229dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="75dp"
+                    android:background="@drawable/bg_button_03"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="CONTINUAR"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flEditAnuncioCategoria" />
+
+                <Button
+                    android:id="@+id/bttnAddImage"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/bg_input_1"
+                    android:gravity="center_vertical"
+                    android:paddingTop="-10dp"
+                    android:scrollbarSize="0dp"
+                    android:text="+"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulMarino"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toTopOf="@+id/rvEditAnunImages"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView22"
+                    app:layout_constraintVertical_bias="0.239"
+                    tools:ignore="RtlCompat,TouchTargetSizeCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

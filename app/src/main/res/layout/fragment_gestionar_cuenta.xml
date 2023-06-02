@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    tools:context=".view.fragments.GestionarCuentaFragment" >
+
+    <TextView
+        android:id="@+id/tvWhatFragment9"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/bg_title"
+        android:elevation="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Gestionar cuenta"
+        android:textAlignment="center"
+        android:textColor="@color/azulMarino"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="411dp"
+        android:layout_height="659dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatFragment9">
+
+        <Button
+            android:id="@+id/bttnGesLogOut"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:background="#00FFFFFF"
+            android:elevation="0dp"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingStart="8dp"
+            android:text="Cerrar sesión"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/negroMedio"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/regTexto15"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
+            android:text="Estado de tu cuenta"
+            android:textColor="@color/azulMarino"
+            android:textColorHint="#656565"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bttnGesLogOut" />
+
+        <View
+            android:id="@+id/view26"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="36dp"
+            android:background="@color/azulMedio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/regTexto15"
+            app:layout_constraintTop_toBottomOf="@+id/bttnGesLogOut" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/angle_right" />
+
+        <Button
+            android:id="@+id/bttnGesDeleteAccount"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/bg_button_04"
+            android:elevation="0dp"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingStart="8dp"
+            android:text="Eliminar cuenta"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Actualmente tu cuenta se encuentra activa y sin restricciones."
+            android:textAlignment="center"
+            android:textColor="@color/negroMedio"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regTexto15" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

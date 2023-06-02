@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    tools:context=".view.fragments.ContratosFragment" >
+
+    <TextView
+        android:id="@+id/tvWhatFragment3"
+        android:layout_width="198dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_title"
+        android:elevation="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Contratos"
+        android:textAlignment="center"
+        android:textColor="@color/azulMarino"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatFragment3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/regTexto13"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="Contratos activos"
+                android:textColor="@color/azulMarino"
+                android:textColorHint="#656565"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/etNameRegister"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view24"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="31dp"
+                android:background="@color/azulMedio"
+                app:layout_constraintBottom_toBottomOf="@+id/regTexto13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/regTexto13"
+                app:layout_constraintTop_toTopOf="@+id/regTexto13" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContratosActivos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto13" />
+
+            <TextView
+                android:id="@+id/noContratosActivos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Ups! No tienes ningún contratoactivo en este momento."
+                android:textAlignment="center"
+                android:textColor="@color/grisClaro"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto13" />
+
+            <TextView
+                android:id="@+id/regTexto14"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="Plantillas"
+                android:textColor="@color/azulMarino"
+                android:textColorHint="#656565"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvContratosActivos" />
+
+            <View
+                android:id="@+id/view25"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="31dp"
+                android:background="@color/azulMedio"
+                app:layout_constraintBottom_toBottomOf="@+id/regTexto14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/regTexto14"
+                app:layout_constraintTop_toTopOf="@+id/regTexto14" />
+
+            <TextView
+                android:id="@+id/regTexto26"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Tus contratos"
+                android:textAlignment="viewStart"
+                android:textColor="@color/negroMedio"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto14" />
+
+            <Button
+                android:id="@+id/bttnContratoSubirPerdonalizado"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="31dp"
+                android:background="@color/transparente"
+                android:elevation="0dp"
+                android:fontFamily="@font/roboto_black"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Subir contrato"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/negroMedio"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rvContratosPersonalizados"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContratosPersonalizados"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto26" />
+
+            <TextView
+                android:id="@+id/noContratosPersonalizados"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="No has subido ningún contrato personalizado"
+                android:textAlignment="center"
+                android:textColor="@color/grisClaro"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto26" />
+
+            <TextView
+                android:id="@+id/regTexto16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Contratos de RêntHûb"
+                android:textAlignment="viewStart"
+                android:textColor="@color/negroMedio"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvContratosPersonalizados" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContratosDefault"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="31dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application' version '7.3.1'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.1'
+}
+
+android {
+    namespace 'com.example.renthubpablo'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.renthubpablo"
+        minSdk 22
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+     aaptOptions {
+         additionalParameters "--no-version-vectors"
+     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    //GOOGLE SERVICES
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    //DEPENDENCIAS FIREBASE
+    implementation 'com.google.firebase:firebase-config:21.4.0'
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-firestore:24.6.0'
+    implementation 'com.google.firebase:firebase-storage:20.2.0'
+    implementation 'com.google.firebase:firebase-auth:22.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.firebase:firebase-database:20.2.1'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+
+    //DEPENDENCIAS GOOGLE MAPS
+    implementation 'com.google.android.libraries.places:places:3.1.0'
+    implementation 'com.google.maps:google-maps-services:0.17.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.android.volley:volley-cronet:1.2.1'
+
+    implementation 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
+
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'//2.5.1
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'//2.5.1
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.6.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.2.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'//4.3.5
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //OTRAS DEPENDENCIAS
+    implementation 'com.github.bumptech.glide:glide:4.12.0'//DESCARGA DE IMAGENES: https://github.com/bumptech/glide
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'//CODIGO QR: https://github.com/journeyapps/zxing-android-embedded
+    implementation 'androidx.recyclerview:recyclerview:1.3.0' //RECYCLER VIEW
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'jp.wasabeef:recyclerview-animators:4.0.2'//ANIMACIONES RECYCLER VIEW: https://github.com/wasabeef/recyclerview-animators
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'//API REST: https://square.github.io/retrofit/
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // Convertidor Gson para convertir los datos JSON en objetos Java
+    implementation 'com.github.ivbaranov:materialfavoritebutton:0.1.5'//FAV BUTTON: https://github.com/IvBaranov/MaterialFavoriteButton
+    implementation 'de.hdodenhof:circleimageview:3.1.0'//IMAGENES CIRCULARES: https://github.com/hdodenhof/CircleImageView
+    implementation 'me.relex:circleindicator:2.1.6'//INDICADOR IMAGEN EN SLIDER: https://github.com/ongakuer/CircleIndicator
+    implementation 'com.nex3z:toggle-button-group:1.2.3'//DISTINTOS SELECTIVE BUTTONS: https://github.com/nex3z/ToggleButtonGroup
+}

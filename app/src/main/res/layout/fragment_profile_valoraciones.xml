@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.ProfileAnunciosFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/bttnShowNewValoracion"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/transparente"
+            android:text="Crear nueva valoración"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/azulMarino"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consNewValoracion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bttnShowNewValoracion">
+
+            <Button
+                android:id="@+id/bttnNewValoracionEnviar"
+                android:layout_width="89dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_button_03"
+                android:text="Enviar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etNewValoracionComentario"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/regTexto12"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="Rating:"
+                android:textColor="@color/azulMarino"
+                android:textColorHint="#656565"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/etUploadTitulo"
+                app:layout_constraintEnd_toStartOf="@+id/rbNewValoracion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/rbNewValoracion"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/negroMedio"
+                android:progressTint="@color/azulClaro"
+                android:rating="0"
+                android:scaleX="1"
+                android:scaleY="1"
+                app:layout_constraintBottom_toTopOf="@+id/etNewValoracionComentario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/regTexto12"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/etNewValoracionComentario"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/bg_input_1"
+                android:ems="10"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="top"
+                android:hint="Comentario\n(Máximo 512 caracteres)"
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:paddingEnd="10dp"
+                android:shadowColor="#AEAEAE"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textColorHint="#656565"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTexto12"
+                tools:ignore="RtlCompat" />
+
+            <View
+                android:id="@+id/view22"
+                android:layout_width="348dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerValoraciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consNewValoracion" />
+
+        <TextView
+            android:id="@+id/noValoraciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="84dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Ups! Esto está muy vacío...\nTodavía no hay ninguna valoración."
+            android:textAlignment="center"
+            android:textColor="@color/negroMedio"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consNewValoracion" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

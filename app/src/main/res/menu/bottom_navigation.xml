@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/search_24"
+        android:title="@string/buscar_fragment_name" />
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/comment_24"
+        android:title="@string/mensaje_fragment_name" />
+    <item
+        android:id="@+id/uploadFragment"
+        android:icon="@drawable/plus"
+        android:title="@string/publicar_fragment_name" />
+    <item
+        android:id="@+id/contratosFragment"
+        android:icon="@drawable/document_24"
+        android:title="@string/contrato_fragment_name" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/user_24"
+        android:title="@string/perfil_fragment_name" />
+</menu>

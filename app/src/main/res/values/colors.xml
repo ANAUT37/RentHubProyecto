@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="BLANCO_X_POCO_MARRON">#F7F2EC</color><!--8A7A6E-->
+    <color name="MARRON_CLARO_X_BLANCO_HUESO">#E5DBC7</color>
+    <color name="MARRON_MEDIO_X_BLANCO_HUESO">#D7CEB2</color>
+    <color name="MARRON_OSCURO_X_BLANCO_HUESO">#C8B99C</color>
+    <color name="BLANCO_HUESO_X_MARRON_CLARO">#EFE9E1</color>
+    <color name="BLANCO_HUESO_X_MARRON_MEDIO">#DFD2C7</color>
+    <color name="BLANCO_HUESO_X_MARRON_OSCURO">#CFB6A8</color>
+    <color name="MARRON_CLARO_X_BLANCO_ROTO">#B9A58E</color>
+    <color name="MARRON_MEDIO_X_BLANCO_ROTO">#A18F7F</color>
+    <color name="MARRON_OSCURO_X_BLANCO_ROTO">#8A7A6E</color><!--8A7A6E-->
+    <color name="BLANCO_ROTO_X_MARRON_CLARO">#F5E9DF</color>
+    <color name="BLANCO_ROTO_X_MARRON_MEDIO">#E5D4C5</color>
+    <color name="BLANCO_ROTO_X_MARRON_OSCURO">#D5BFAE</color>
+    <!--PALETA 2-->
+    <color name="azulMarino">#2b364a</color><!-- -->
+    <color name="azulMarinoDos">#30466E</color>
+    <color name="azulMarinoTranslucidoUno">#F22B364A</color>
+    <color name="azulMarinoTranslucidoDos">#F230466E</color>
+    <color name="azulMedio">#3F4F6C</color>
+    <color name="negroOscuro">#291d21</color>
+    <color name="negroMedio">#505050</color>
+    <color name="grisClaro">#CACACA</color>
+    <color name="azulClaro">#BBCFCF</color><!-- -->
+    <color name="casiBlanco">#e1daca</color>
+    <color name="casiNegro">#151515</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="rosa">#cb6f84</color><!-- -->
+    <color name="azulChillon">#25CACA</color><!-- -->
+    <color name="transparente">#0025CACA</color>
+
+
+
+</resources>

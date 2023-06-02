@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/BLANCO_X_POCO_MARRON">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItemFeed"
+        android:layout_width="0dp"
+        android:layout_height="465dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/BLANCO_X_POCO_MARRON"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blanco">
+
+            <TextView
+                android:id="@+id/ifeedDireccion"
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Dirección"
+                android:textColor="@color/negroMedio"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedPrecio" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/iExtendedSlider"
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.103"
+                tools:ignore="MissingConstraints" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/sliderIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="490dp"
+                app:layout_constraintBottom_toTopOf="@+id/iExtendedSlider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/ifeedTitulo"
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Titulo"
+                android:textColor="@color/azulMarino"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ifeedPrecio"
+                app:layout_constraintTop_toBottomOf="@+id/iExtendedSlider" />
+
+            <TextView
+                android:id="@+id/ifeedPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/bg_input_1"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="0€ / Mes"
+                android:textColor="@color/azulMarino"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iExtendedSlider" />
+
+            <ImageButton
+                android:id="@+id/ifeedbttnFav"
+                android:layout_width="36dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/blanco"
+                app:layout_constraintEnd_toStartOf="@+id/ifeedVistasCount"
+                app:layout_constraintStart_toEndOf="@+id/ifeedFavCount"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedDescripcion"
+                app:srcCompat="@drawable/heart_empty"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/ifeedVistasCount"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="viewStart"
+                android:textColor="@color/azulMarino"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ifeedbttnFav"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedDescripcion" />
+
+            <TextView
+                android:id="@+id/ifeedDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                android:textColor="@color/azulMedio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedDireccion" />
+
+            <ImageButton
+                android:id="@+id/ifeedbttnVistas"
+                android:layout_width="40dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="248dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/blanco"
+                app:layout_constraintEnd_toStartOf="@+id/ifeedFavCount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedDescripcion"
+                app:srcCompat="@drawable/eye"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/ifeedFavCount"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="3dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="viewStart"
+                android:textColor="@color/azulMarino"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/ifeedbttnFav"
+                app:layout_constraintStart_toEndOf="@+id/ifeedbttnVistas"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedDescripcion" />
+
+            <TextView
+                android:id="@+id/iExtendedInfo5"
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_medium_italic"
+                android:text="Pulsa para ver más detalles"
+                android:textColor="@color/negroMedio"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ifeedDescripcion" />
+
+            <View
+                android:id="@+id/view20"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="@color/azulClaro"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
